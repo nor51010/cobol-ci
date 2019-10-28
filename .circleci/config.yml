@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  compile:
+    docker:
+      - image: opensourcecobol/opensource-cobol
+    steps:
+      - checkout
+      - run: cobc -m -o HELLO.so HELLO.cbl
+  test:
+    docker:
+      - image: opensourcecobol/opensource-cobol
+    steps:
+      - checkout
+      - run: cobc -m -o HELLO.so HELLO.cbl
+      - run: cobcrun HELLO
+      - run: test "`./shell/run.sh HELLO`" = 'HELLO WORLD!'
+workflows:
+  version: 2
+  test:
+    jobs:
+      - compile
+      - test
