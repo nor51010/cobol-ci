@@ -1,6 +1,6 @@
        IDENTIFICATION              DIVISION.
-       PROGRAM-ID.                 HELLO.
-       DATE                        DIVISION.
+       PROGRAM-ID.                 HELL.
+       DATA                        DIVISION.
        WORKING-STORAGE             SECTION.
        PROCEDURE                   DIVISION.
        MAIN-RTN.
