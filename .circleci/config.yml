@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: cobc -m -o HELLO.so HELLO.cbl
       - run: cobcrun HELLO
-      - run: test "`./shell/run.sh HELLO`" = 'HELLO WORLD!'
+      - run: test "cobcrun HELLO`" = 'HELLO WORLD!'
 workflows:
   version: 2
   test:
