@@ -1,9 +1,9 @@
        IDENTIFICATION              DIVISION.
-       PROGRAM-ID.                 HELL.
+       PROGRAM-ID.                 HELLO.
        DATA                        DIVISION.
        WORKING-STORAGE             SECTION.
        PROCEDURE                   DIVISION.
        MAIN-RTN.
-           DISPLAY "HELLO WORLD!".
+           DISPLAY "HELL WORLD!".
        MAIN-EXT.
            STOP RUN.
